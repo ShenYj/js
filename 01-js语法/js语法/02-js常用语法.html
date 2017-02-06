@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>js常用语法</title>
+    <script type="text/javascript">
+
+        // 1.基本数据类型
+        var a = 10;
+        var b = 10.0;
+        var c = 'abc';
+        d = 'bcd';
+        // 2.bool类型
+        var flag = true;
+        var tag = false;
+        // 3.空对象
+        var result = null;
+
+        console.log(a,b,c,d,flag,tag,result);
+
+        // 4.typeof 检测真实类型:number number string string boolean boolean object
+        console.log(typeof a,typeof b,typeof c,typeof d,typeof flag,typeof tag,typeof result);
+
+        // 5.字符串拼接
+        var e = c + '-' + d;
+        console.log(e);
+
+        // 6.数组
+        var arr = [10,-5,'abc',false,null];
+        console.log(arr,typeof arr);
+
+        // 7.for循环
+        for(var i = 0;i<arr.length;i++){
+            console.log(arr[i]);
+        }
+
+        for(var i in arr) {
+            console.log(i,arr[i]);
+        }
+        // 8.移除数组中的最后一个元素
+        arr.pop();
+
+        // 9.数组中添加元素
+        arr.push(null);
+        console.log(arr);
+
+        // 10.取出最小值
+        var numbers = [10,-9,22,54,19];
+        var minNumber = Math.min.apply(null,numbers);
+        console.log(minNumber);
+
+        var maxNumber = Math.max.apply(null,numbers);
+        console.log(maxNumber)
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

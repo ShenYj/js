@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+
+        // 1.匿名函数 需要使用一个变量接收
+        var test = function () {
+            console.log('匿名函数');
+        }
+        // 使用接收的变量来调用
+        test();
+
+
+        // 2.有名称的函数
+        function add (a,b) {
+            return a + b;
+        }
+
+        var result = add(10,12);
+        console.log(result);
+
+        // 数组求和
+        function sum(numbers){
+            var count = 0;
+            for(var i = 0;i<numbers.length;i++){
+                count += numbers[i];
+            }
+            return count;
+        }
+        var nums = [10,23,423,74,12,894,2];
+        console.log(sum(nums))
+
+
+        // 3.内置数组 arguments 外界传入的参数
+        function sums(){
+            var count = 0;
+            for(var i = 0;i<arguments.length;i++){
+                count += arguments[i];
+            }
+            return count;
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

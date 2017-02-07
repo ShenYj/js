@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+
+        // 构造函数
+        function Dog(){
+            this.name = null;
+            this.height = null;
+            this.friends = [];
+            this.age = null;
+            this.eat = function(sth){
+                console.log(this.name + '吃' + sth);
+            },
+            this.run = function(somewhere){
+                console.log(this.name + '在' + somewhere + '跑');
+            }
+            console.log('[[this alloc] init]');
+        }
+        // 构造函数
+        function newDog(name,height,friends,age){
+            this.name = name;
+            this.height = height;
+            this.friends = friends;
+            this.age = age;
+            this.eat = function(sth){
+                console.log(this.name + '吃' + sth);
+            },
+                    this.run = function(somewhere){
+                        console.log(this.name + '在' + somewhere + '跑');
+                    }
+        }
+
+        // 初始化对象
+        var dog1 = new Dog();
+        var dog2 = new Dog();
+        // 设置属性
+        dog1.name = 'wangcai';
+        dog1.height = 1.38;
+        dog1.age = 8;
+        dog1.friends = ['xixi','mimi'];
+        dog2.name = 'chundan';
+        dog2.height = 2.0;
+        dog2.age = 4;
+        dog2.friends = ['wangcai'];
+
+        console.log(dog1,dog2);
+        // 调用对象方法
+        dog1.eat('粑粑');
+        dog2.run('天上');
+
+
+        var dog3 = new newDog('xixi',2.3,['goudan','wangcai'],6);
+        var dog4 = new newDog('mimi',2.2,['wangcai'],5);
+
+        console.log(dog3,dog4);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

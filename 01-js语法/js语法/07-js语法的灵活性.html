@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+
+        // 一 、逻辑或
+        var name1 = 'name1';
+        var name2 = 'name2';
+        var name3 = 'name3';
+        var name4 = 'name4';
+
+        var newName = null;
+        // 1.if判断
+        if(name1){
+            newName = name1;
+        }else if (name2){
+            newName = name2;
+        }else if (name3){
+            newName = name3;
+        }else {
+            newName = name4;
+        }
+
+        console.log(newName);
+        // 2.使用逻辑或
+        newName = name1 || name2 || name3 || name4;
+
+        console.log(newName);
+
+
+        // 二 、逻辑与
+        var age = 22;
+        // 1.条件判断
+        if(age > 20){
+            console.log('可以结婚了');
+        }
+        // 2.逻辑与
+        // 条件 && {
+        //}
+        (age > 20) && console.log('可以结婚了');
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <img name="icon" class="icon" src="../images/IMG_3946.JPG">
+    <input name="input" type="text" value="我是需要拷贝的内容">
+    <p name="p">风景很美!</p>
+    <button name="button">隐藏</button>
+
+    <script type="text/javascript">
+        var img = document.getElementsByName('icon')[0];
+        //console.log(img);
+
+        // 常用的事件
+        // 鼠标进入图片区域,移动,区域内按下,移出,按下抬起
+        img.onmouseover = function(){
+            console.log('鼠标进入图片');
+        }
+        img.onmousemove = function(){
+            console.log('鼠标在图片上移动');
+        }
+        img.onmousedown = function(){
+            console.log('鼠标在图片区域内按下');
+        }
+        img.onmouseout = function(){
+            console.log('鼠标移出图片');
+        }
+        img.onmouseup = function(){
+            console.log('鼠标在图片区域内按下并抬起后');
+        }
+        // 页面加载完毕
+        window.onload = function(){
+            alert('页面加载完毕');
+        }
+
+        // 拿到输入框,获取焦点时修改属性
+        var inputView = document.getElementsByName('input')[0];
+        inputView.onfocus = function(){
+            inputView.width = '700px';
+            inputView.height = '60px';
+            // css中的属性要通过style调用
+            inputView.style.outline = 'none';
+            inputView.style.fontSize = '30px';
+            inputView.style.border = '2px solid red';
+        }
+        // 拿到选中的内容
+        inputView.onselect = function(){
+            alert(inputView.value);
+        }
+
+        // 隐藏和显示
+        var p = document.getElementsByName('p')[0];
+        var btn = document.getElementsByName('button')[0];
+        btn.onclick = function(){
+            if(btn.innerText == '隐藏'){
+                p.style.display = 'none';
+                btn.innerText = '显示';
+            }else{
+                p.style.display = 'inline-block';
+                btn.innerText = '隐藏';
+            }
+
+        }
+
+    </script>
+</body>
+</html>

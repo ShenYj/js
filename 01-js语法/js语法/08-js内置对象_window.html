@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+
+        // 一.window
+        // 1.所有的全局变量都是window的属性
+        // 2.所有的全局函数都是window的函数 alert 、console等
+        var age = 18;
+        function demo(){
+            console.log('function');
+        }
+
+        console.log(window.age);
+        window.demo();
+
+        function Dog() {
+            console.log(this);
+        }
+        // window
+        Dog();
+        // dog1对象
+        var dog1 = new Dog();
+
+        // 动态跳转
+        //window.location.href = 'http://baidu.com';
+        //location.href = 'http://baidu.com';
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

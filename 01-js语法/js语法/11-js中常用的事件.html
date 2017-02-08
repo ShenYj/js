@@ -18,23 +18,23 @@
         // 鼠标进入图片区域,移动,区域内按下,移出,按下抬起
         img.onmouseover = function(){
             console.log('鼠标进入图片');
-        }
-        img.onmousemove = function(){
+        };
+        img.onmousemove = function() {
             console.log('鼠标在图片上移动');
-        }
+        };
         img.onmousedown = function(){
             console.log('鼠标在图片区域内按下');
-        }
+        };
         img.onmouseout = function(){
             console.log('鼠标移出图片');
-        }
+        };
         img.onmouseup = function(){
             console.log('鼠标在图片区域内按下并抬起后');
-        }
+        };
         // 页面加载完毕
         window.onload = function(){
             alert('页面加载完毕');
-        }
+        };
 
         // 拿到输入框,获取焦点时修改属性
         var inputView = document.getElementsByName('input')[0];
@@ -45,11 +45,11 @@
             inputView.style.outline = 'none';
             inputView.style.fontSize = '30px';
             inputView.style.border = '2px solid red';
-        }
+        };
         // 拿到选中的内容
         inputView.onselect = function(){
             alert(inputView.value);
-        }
+        };
 
         // 隐藏和显示
         var p = document.getElementsByName('p')[0];

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数练习</title>
+    <script type="text/javascript">
+
+        // 求和函数
+
+        // 1.1
+        var number1 = 15234;
+        var number2 = 543234;
+        // 求和
+        function sum (a, b) {
+            return a + b;
+        }
+        var result = sum(number1,number2);
+//        console.log('求和结果:' + result);
+
+        // 1.2
+        var array = [1,2354, 6453, 9732345, 563372834];
+        function sum1(numbers) {
+            var result = 0;
+            for (var i = 0; i < numbers.length; i ++){
+                result += numbers[i];
+            }
+            return result;
+        }
+
+        //console.log('数组元素求和:' + sum1(array));
+
+        // 1.3通过函数内的内置数组
+        function sum2() {
+            var result = 0;
+            for (var i = 0; i < arguments.length; i ++){
+                result += arguments[i];
+            }
+            return result;
+        }
+        // 直接传数组不行
+//        console.log('数组求和:' + sum2(12,2354, 6453, 9732345, 563372834));
+
+        // 匿名函数
+        // 2.1
+        var testFun = function () {
+            console.log('匿名函数');
+        }
+        // 匿名函数调用
+        testFun();
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js-练习</title>
+    <script type="text/javascript">
+        //alert('Hello world');   // alert弹框
+        var number = 1;
+        var float = 0.01;
+        var string1 = 'abc';
+        var string2 = '23545';
+
+//        console.log('输出变量:', number, float, string1, string2);
+//        console.log('数据类型:', typeof number, typeof float, typeof string2);
+
+        var array = [number, float, string1, string2];
+//        console.log(array);
+//        console.log(typeof array);
+
+        // 遍历输出
+//        for (var i in array ) {
+//            console.log('遍历输出1: ' + array[i] + ' ' + typeof array[i]);
+//        }
+//        for (var i = 0 ; i < array.length; i ++){
+//            console.log('遍历输出2: ' + array[i] + ' ' + typeof array[i]);
+//        }
+        // 删除元素
+//        array.pop();// 删除最后一个元素
+        array.push('asdfasdfasdfaf');//增加一个元素
+        console.log(array);
+
+//        var minNumber = Math.min(1, 2, 3, 4, 6);
+//        console.log(minNumber);
+        var minNumber = Math.min.apply(null,array);
+        console.log(minNumber);
+
+    </script>
+</head>
+<body>
+    <button onclick="alert('点击了按钮');">点我啊</button>
+</body>
+</html>
